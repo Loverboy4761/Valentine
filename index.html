@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo {
+      font-size: 48px;
+      margin-top: 80px;
+      font-weight: bold;
+    }
+
+    .logo span:nth-child(1){color:#4285F4;}
+    .logo span:nth-child(2){color:#DB4437;}
+    .logo span:nth-child(3){color:#F4B400;}
+    .logo span:nth-child(4){color:#4285F4;}
+    .logo span:nth-child(5){color:#0F9D58;}
+    .logo span:nth-child(6){color:#DB4437;}
+
+    input {
+      width: 80%;
+      max-width: 400px;
+      padding: 12px;
+      margin-top: 20px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #f8f9fa;
+    }
+
+    #imageSection {
+      display: none;
+      margin-top: 30px;
+    }
+
+    .gf-pic {
+      width: 90%;
+      max-width: 300px;
+      border-radius: 15px;
+      margin: 12px auto;
+      display: block;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    #message {
+      max-width: 650px;
+      margin: 35px auto;
+      font-size: 18px;
+      padding: 0 20px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google-style logo -->
+  <div class="logo">
+    <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+  </div>
+
+  <!-- Search bar -->
+  <input type="text" id="searchInput" placeholder="Search">
+  <br>
+  <button onclick="searchImages()">Google Search</button>
+
+  <!-- Music -->
+  <audio id="bgMusic">
+    <source src="all-that-i-need.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Images + Message -->
+  <div id="imageSection">
+    <img src="images/gf1.jpeg" class="gf-pic">
+    <img src="images/gf2.jpeg" class="gf-pic">
+    <img src="images/gf3.jpeg" class="gf-pic">
+    <img src="images/gf4.jpeg" class="gf-pic">
+    <img src="images/gf5.jpeg" class="gf-pic">
+
+    <div id="message">
+      You complete me. You are the love of my life.
+      <br><br>
+      I know this long distance is tough, and there are days when it feels heavy,
+      but my faith in us never changes. Every mile between us only reminds me how
+      real and strong what we have is.
+      <br><br>
+      No matter how hard it gets, I choose you—every single time. One day, all this
+      waiting will make sense, and we’ll look back knowing it was worth it.
+      <br><br>
+      We’ll make it out of this super happy, stronger than ever, and finally
+      together in the future we keep dreaming about.
+    </div>
+  </div>
+
+  <script>
+    function searchImages() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+
+      if (query === "happiness") {
+        document.getElementById("imageSection").style.display = "block";
+
+        const music = document.getElementById("bgMusic");
+        music.play().catch(() => {});
+      }
+    }
+  </script>
+
+</body>
+</html>
+
